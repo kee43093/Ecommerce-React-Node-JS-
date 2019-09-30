@@ -2,7 +2,7 @@
 // =============================================================
 const router = require("express").Router();
 const express = require('express')
-// const cors = require('cors')
+const cors = require('cors')
 // const path = require('path')
 var mysql = require('mysql');
 const helmet = require('helmet')
@@ -12,7 +12,7 @@ const helmet = require('helmet')
 // Sets up the Express App
 // =============================================================
  const app = express()
- const PORT = process.env.PORT || 3001;
+ const PORT = process.env.PORT || 3002;
 
 
 // Define middleware here
@@ -20,7 +20,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 // app.use(addRequestId);
 app.use(helmet())
-// app.use(cors())
+app.use(cors())
 
 
 
@@ -53,6 +53,21 @@ app.get('/', (req, res) => {
   res.send(`we made it!`) 
 })
 
+app.get('/api/products', (req, res) => {
+  console.log('hello world')
+  var sql = `SELECT Photos_info.image_id, Photos_info.hyperlink, Product_info.ProductName, Price_info.original_price
+  FROM Photos_info
+  INNER JOIN Product_info
+  ON Photos_info.price_id = Product_info.price_id
+  INNER JOIN Price_info 
+  ON Photos_info.price_id = Price_info.price_id`
+  connection.query(sql , function (err, result) {
+    if (err) throw err;
+    console.log(result);
+    res.send(result)
+  });
+})
+
 app.get('/api/contact', (req, res) => {
   console.log('hello world')
   connection.query("SELECT * FROM products", function (err, result) {
@@ -62,21 +77,9 @@ app.get('/api/contact', (req, res) => {
   });
 })
 
-app.get('/api/products', (req, res) => {
-  console.log('hello world')
-  var sql = `SELECT Photos.image_id, Photos.hyperlink,
-   products.ProductName, Price.original_price FROM Photos INNER JOIN products ON Photos.product_id = products.product_id INNER JOIN Price ON Photos.product_id = Price.product_id`
-  connection.query(sql , function (err, result) {
-    if (err) throw err;
-    console.log(result);
-    res.send(result)
-  });
+app.get('/api/productfilter/:query', (req, res) => {
+  res.send(`YUp`)
 })
-
-
-
-// "SELECT Photos.image,Photos.hyperlink,products.ProductName, Price.original_price FROM Photos INNER JOIN products ON Photos.product_id = products.product_id INNER JOIN Price ON Photos.product_id = Price.product_id"
-
 
 
 app.listen(PORT, function () {

@@ -7,8 +7,7 @@
 
 .bg-img1 {
     background-image: url("/images/PUBG_Mobile.0.jpg");
-    height: 40vh;
-    background-position: center;
+    background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
     position:relative;
@@ -16,7 +15,7 @@
 
 .bg-img2 {
     background-image: url("/images/200x120_Assassins_Creed_Black_Flag.jpeg");
-    height: 40vh;
+    height: 75vh;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -25,7 +24,7 @@
 
 .bg-img3 {
     background-image: url("/images/ghost\ replacement.jpeg");
-    height: 40vh;
+    height: 75vh;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -34,16 +33,16 @@
 
 .bg-img4 {
     background-image: url("/images/2k20\ forreal.jpeg");
-    height: 40vh;
-    background-position: center;
-    background-size: cover;
+    height: 75vh;
+    background-position: top;
+    background-size:cover;
     background-repeat: no-repeat;
     position:relative;
 }
 
 .bg-img5 {
     background-image: url("/images/the-elder-scrolls-v-skyrim.jpg");
-    height: 40vh;
+    height: 75vh;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -52,7 +51,7 @@
 
 .bg-img6 {
     background-image: url("/images/madden20.jpg");
-    height: 40vh;
+    height: 75vh;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -61,7 +60,7 @@
 
 .bg-img7 {
     background-image: url("/images/DAOC.jpg");
-    height: 40vh;
+    height: 75vh;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -70,7 +69,7 @@
 
 .bg-img8 {
     background-image: url("/images/CounterStrike2.png");
-    height: 40vh;
+    height: 75vh;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -79,7 +78,7 @@
 
 .bg-img9 {
     background-image: url("/images/Grand\ Theft\ Auto\ V.jpg");
-    height: 40vh;
+    height:75vh;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -88,7 +87,7 @@
 
 .bg-img10 {
     background-image: url("/images/WOW.jpg");
-    height: 40vh;
+    height: 75vh;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -97,7 +96,7 @@
 
 .bg-img11 {
     background-image: url("/images/2k20\ forreal.jpeg");
-    height: 40vh;
+    height: 75vh;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -106,7 +105,7 @@
 
 .bg-img12 {
     background-image: url("/images/PUBG_Mobile.0.jpg");
-    height: 40vh;
+    height: 75vh;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

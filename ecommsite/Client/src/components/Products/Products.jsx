@@ -2,6 +2,7 @@
 import React from 'react';
 // import Header from './components/Header/Header';
 import "./products.css";
+import Video from '../ReactVideo/Video';
 
 
 class Products extends React.Component {
@@ -10,7 +11,7 @@ class Products extends React.Component {
    }
    
    componentDidMount(){
-       fetch('http://localhost:3001/api/products')
+       fetch('http://localhost:3002/api/products')
        .then(res => res.json())
        .then(product => {
         //    console.log(product)
@@ -28,6 +29,7 @@ class Products extends React.Component {
    
     render(){
     return (
+        
         <div className= "main_grid">
         {this.state.items.map((item, index) => {
            console.log(item)

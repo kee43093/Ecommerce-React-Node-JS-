@@ -7,7 +7,6 @@
 
 
 header {
-    background:black;
     width: 100%;
     color:grey;
 }
@@ -25,16 +24,14 @@ li {
     padding: 15px;
     list-style-type: none;
     margin: auto;
-    border: solid black 5px;
 }
 
 .sliderContainer {
-
     margin: auto ;
     border: solid black 10px;
     overflow: hidden;
     position:relative;
-   
+    
 }
 
 .sliderImages {
@@ -58,7 +55,7 @@ li {
 
 a {
     text-decoration: none;
-    color: blue;
+    color:green;
 }
 
 
@@ -132,4 +129,19 @@ a {
 article {
   border: 0;
   
+}
+
+.carousel .thumbs-wrapper {
+    display: none;
+}
+
+.Carousel {
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    top: 4rem;
+}
+
+.carousel .slide img {
+    height: 100vh;
 }

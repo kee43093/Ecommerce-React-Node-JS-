@@ -1,13 +1,13 @@
 header {
     position: relative;
-    text-align:center;
+    text-align: center;
 }
 
 .xbox_logo {
     background-image:url("/images/Xbox-Live-on-Android-iOS.jpg");
     background-size: contain;
     height: 10vh;
-    width: 10vh;
+    width: 18vh;
     position: absolute;
     right:0;
     top:0;
@@ -34,7 +34,6 @@ header {
     position:absolute;
     top:0;
     left:0;
-
 }
 
 h1 {
@@ -85,5 +84,16 @@ h1 {
     height: 1rem;
     width: 1rem;
     background: red;
+}
+
+ul {
+    display: flex;
+
+}
+
+li {
+    padding: 15px;
+    list-style-type: none;
+    margin: auto;
 }
 
