@@ -1,30 +1,14 @@
-*{
+/* *{
     padding:0;
     margin:0;
     font-family: Arial, Helvetica, sans-serif;
-}
-
-
-
-header {
-    width: 100%;
-    color:grey;
 }
 
 h1 {
     text-align: center;
 }
 
-ul {
-    display: flex;
 
-}
-
-li {
-    padding: 15px;
-    list-style-type: none;
-    margin: auto;
-}
 
 .sliderContainer {
     margin: auto ;
@@ -50,13 +34,7 @@ li {
 
 .sliderImages .image {
     height:100vh;
-
-}
-
-a {
-    text-decoration: none;
-    color:green;
-}
+} */
 
 
 .fas {
@@ -92,7 +70,7 @@ a {
 }
 
 
-.post {
+/* .post {
     align-items : center;
     display: flex;
     justify-content: center;
@@ -106,10 +84,10 @@ a {
     text-align: center;
     overflow: hidden;
 
-}
+} */
 
 
-
+/* 
 .box {
   background:rgba(0, 0, 0, 0.5);
   border-radius: 4px;
@@ -129,19 +107,53 @@ a {
 article {
   border: 0;
   
-}
+} */
 
 .carousel .thumbs-wrapper {
     display: none;
 }
 
 .Carousel {
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     position: relative;
-    top: 4rem;
+    
 }
 
 .carousel .slide img {
     height: 100vh;
+}
+
+
+
+
+.slide1 {
+    background: url(/images/championshipSlider.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.slide2 {
+    background: url(/images/xboxlogo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.slide3 {
+    background: url(/images/battleslider.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.images {
+    display: none;
 }

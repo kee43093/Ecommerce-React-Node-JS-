@@ -12,7 +12,7 @@ const helmet = require('helmet')
 // Sets up the Express App
 // =============================================================
  const app = express()
- const PORT = process.env.PORT || 3002;
+ const PORT = process.env.PORT || 3001
 
 
 // Define middleware here
@@ -53,6 +53,18 @@ app.get('/', (req, res) => {
   res.send(`we made it!`) 
 })
 
+
+
+// app.get('/api/products/:type', (req, res)=> {
+//   let type = req.params.type
+//   var sql = `SELECT * FROM Product_info WHERE ProductName = ?`
+//   connection.query(sql, [type], function (err, result) {
+//     if (err) throw err;
+//     console.table(result);
+//     res.send(result)
+//   });
+//  })
+
 app.get('/api/products', (req, res) => {
   console.log('hello world')
   var sql = `SELECT Photos_info.image_id, Photos_info.hyperlink, Product_info.ProductName, Price_info.original_price
@@ -63,23 +75,30 @@ app.get('/api/products', (req, res) => {
   ON Photos_info.price_id = Price_info.price_id`
   connection.query(sql , function (err, result) {
     if (err) throw err;
-    console.log(result);
+    console.table(result);
     res.send(result)
   });
 })
 
 app.get('/api/contact', (req, res) => {
   console.log('hello world')
-  connection.query("SELECT * FROM products", function (err, result) {
+  connection.query("SELECT * FROM Contacts", function (err, result) {
     if (err) throw err;
     console.log(result);
     res.send(result)
   });
 })
 
-app.get('/api/productfilter/:query', (req, res) => {
-  res.send(`YUp`)
+app.get('/api/products/type/:type', (req , res) => {
+  const { type } = req.params
+  const sql = mysql.format(`SELECT * FROM prods WHERE 1 AND ProductName LIKE ? ` ,[`${type}%`])
+  connection.query(sql, (err , data) => {
+    if (err) throw err;
+    res.send(data)
+  })
 })
+
+
 
 
 app.listen(PORT, function () {

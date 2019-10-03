@@ -1,13 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import ReactPlayer from 'react-player'
+import ReactPlayer from 'react-player';
+import "./Video.css";
 
 
 
 const Video = () => {
     return (
         <>
-         <ReactPlayer  url="https://youtu.be/sVEhFrg1QNE" width="100%"/>
+         <ReactPlayer className="video" url="https://youtu.be/sVEhFrg1QNE" width="100%"/>
          </>
         )
 

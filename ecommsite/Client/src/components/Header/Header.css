@@ -1,99 +1,86 @@
-header {
-    position: relative;
-    text-align: center;
+.nav {
+    height: 100px;
+    background-color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.xbox_logo {
-    background-image:url("/images/Xbox-Live-on-Android-iOS.jpg");
-    background-size: contain;
-    height: 10vh;
-    width: 18vh;
-    position: absolute;
-    right:0;
-    top:0;
-    background-repeat: no-repeat;
-
+.logo {
+    height: 100px;
+    margin-right: 70%;
 }
 
-.alien_logo {
-    background-image:url("/images/Alienware-Logo.jpg");
-    background-size:contain;
-    height: 10vh;
-    width: 10vw;
-    background-repeat: no-repeat;
-    display:inline-block;   
-
-}
-
-.Ps4_logo {
-    background-image:url("/images/PS4-replacement.png");
-    background-size: contain;
-    height: 10vh;
-    width:10vw;
-    background-repeat: no-repeat;
-    position:absolute;
-    top:0;
-    left:0;
-}
-
-h1 {
-    color: grey;
-    
-}
-
-.versus_one {
-    position:absolute;
-    right: 19rem;
-    top:2rem;
-}
-
-.versus_two {
-    position:absolute;
-    left: 19rem;
-    top:2rem;
-}
-
-.signup {
-    position: absolute;
-    left:0;
-    top: 4.5rem;
-    font-size: 1.5rem;
-    color: green;
-    text-decoration: none;
-
-}
-
-.about_us {
-    position: absolute;
-    right:0;
-    top: 4.5rem;
-    font-size: 1.5rem;
-    color: green;
-    text-decoration: none;
-
-}
-
-.option {
-    font-size: 2rem;
-    color:grey;
-    text-align: center;
-}
-
-.option:after {
-    content:"";
-    height: 1rem;
-    width: 1rem;
-    background: red;
-}
-
-ul {
+.list {
     display: flex;
-
+    list-style: none;
+    height: 100px;
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
-li {
-    padding: 15px;
-    list-style-type: none;
-    margin: auto;
+.link {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.2em;
+    padding: 0 10px;
 }
 
+.link:hover {
+    color: green;
+}
+
+@media only screen and (max-width: 3000px) {
+    .logo {
+        margin-right: 60%;
+    }
+}
+
+@media only screen and (max-width: 2230px) {
+    .logo {
+        margin-right: 50%;
+    }
+}
+
+@media only screen and (max-width: 1781px) {
+    .logo {
+        margin-right: 40%;
+    }
+}
+
+@media only screen and (max-width: 1500px) {
+    .logo {
+        margin-right: 30%;
+    }
+}
+
+@media only screen and (max-width: 1275px) {
+    .logo {
+        margin-right: 15%;
+    }
+}
+
+@media only screen and (max-width: 1050px) {
+    .logo {
+        margin-right: 8%;
+    }
+}
+
+@media only screen and (max-width: 975px) {
+    .nav {
+        height: 250px;
+    }
+
+    .list {
+      flex-direction: column;
+    }
+
+    .logo {
+        margin: 0;
+    }
+
+    .link {
+        padding: 0;
+    }
+}

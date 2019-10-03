@@ -1,41 +1,23 @@
 import React from 'react';
 import "./Header.css";
 import { Link } from 'react-router-dom';
-
-
 import ReactPlayer from 'react-player'
 
 
 
 const Header = () => {
     return (
-        <header>
-            <nav>
-                <ul>
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/products">Products</Link></li>
+            <nav className="nav">
+                <ul className="list">
+                <img className="logo" src="/images/img.jpg" alt=""/>
+                    <li><Link className="link" to="/">Home</Link></li>
+                    <li><Link className="link" to="/products">Products</Link></li>
+                    <li><Link className="link" to="/Contact">Contact</Link></li>
+                    <li><a href="#footer" className="link">Subscribe</a></li>
+                    <li><a href="#" className="link">About Us</a></li>
                 </ul>
-            </nav>
-        <div className="xbox_logo"></div>
-        
-       
-        <div className="alien_logo">
-    
-        </div>
-    
-        <div className="Ps4_logo">
-    
-        </div>
-    
-        <a href="#footer" className="signup">Sign Up</a>
-        <a href="#" className="about_us">About Us</a>
-        {/* <h1>Game World!</h1>
-         {/* <ReactPlayer  url="https://youtu.be/sVEhFrg1QNE" width="100%"/> */}
-            
-        
-      </header>
+            </nav>       
         )
-
 
     }
 

@@ -21,34 +21,12 @@ class Hero extends React.Component {
             
 
             <Carousel className="Carousel">
-                        <div>
-                            <img src="./images/championshipSlider.jpg" id="lastClone" alt="" />
-                            <p className="legend">Legend 1</p>
-                        </div>
+                        <div className="slide1"></div>
                         
-                        <div>
-                            <img src="./images/dims.jpeg" alt="" />
-                            <p className="legend">Legend 2</p>
-                        </div>
+                        <div className="slide2"></div>
                         
-                        <div>
-                            <img src="/images/xboxoneSlider.jpg" alt="" />
-                            <p className="legend">Legend 3</p>
-                        </div>
-                        
-                        <div>
-                            <img src="/images/alienWareSlider.webp" id="lastClone" alt="" />
-                            <p className="legend">Legend 1</p>
-                        </div>
-                        
-                        <div>
-                            <img src="/images/sliderTeams.png" alt="" />
-                            <p className="legend">Legend 2</p>
-                        </div>
-                        
-                        <div>
-                            <img src="/images/battleSlider.jpg" alt="" />
-                            <p className="legend">Legend 3</p>
+                        <div className="slide3">
+                            <img className='images'/>
                         </div>
                         
                 </Carousel>

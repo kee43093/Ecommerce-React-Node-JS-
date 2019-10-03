@@ -1,8 +1,13 @@
 .main_grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding-top: 1rem;
-    grid-gap: 1rem;
+    grid-template-columns: 600px 600px 600px;
+    padding-top: 5em;
+    grid-gap: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    justify-items: center;
+    max-width: 2000px;
+    margin: 0 auto;
+    justify-content: center;
 }
 
 .bg-img1 {
@@ -11,6 +16,8 @@
     background-size: cover;
     background-repeat: no-repeat;
     position:relative;
+    height: 600px;
+    width: 600px
 }
 
 .bg-img2 {
@@ -20,6 +27,8 @@
     background-size: cover;
     background-repeat: no-repeat;
     position:relative;
+    height: 600px;
+    width: 600px
 }
 
 .bg-img3 {
@@ -29,6 +38,8 @@
     background-size: cover;
     background-repeat: no-repeat;
     position:relative;
+    height: 600px;
+    width: 600px
 }
 
 .bg-img4 {
@@ -38,6 +49,8 @@
     background-size:cover;
     background-repeat: no-repeat;
     position:relative;
+    height: 600px;
+    width: 600px
 }
 
 .bg-img5 {
@@ -47,6 +60,8 @@
     background-size: cover;
     background-repeat: no-repeat;
     position:relative;
+    height: 600px;
+    width: 600px
 }
 
 .bg-img6 {
@@ -56,6 +71,8 @@
     background-size: cover;
     background-repeat: no-repeat;
     position:relative;
+    height: 600px;
+    width: 600px
 }
 
 .bg-img7 {
@@ -65,6 +82,8 @@
     background-size: cover;
     background-repeat: no-repeat;
     position:relative;
+    height: 600px;
+    width: 600px
 }
 
 .bg-img8 {
@@ -74,6 +93,8 @@
     background-size: cover;
     background-repeat: no-repeat;
     position:relative;
+    height: 600px;
+    width: 600px
 }
 
 .bg-img9 {
@@ -83,6 +104,8 @@
     background-size: cover;
     background-repeat: no-repeat;
     position:relative;
+    height: 600px;
+    width: 600px
 }
 
 .bg-img10 {
@@ -92,6 +115,8 @@
     background-size: cover;
     background-repeat: no-repeat;
     position:relative;
+    height: 600px;
+    width: 600px
 }
 
 .bg-img11 {
@@ -101,6 +126,8 @@
     background-size: cover;
     background-repeat: no-repeat;
     position:relative;
+    height: 600px;
+    width: 600px
 }
 
 .bg-img12 {
@@ -110,29 +137,113 @@
     background-size: cover;
     background-repeat: no-repeat;
     position:relative;
-}
-
-
-.overlay {
-    position: absolute;
-    width: 100%;
-    height:100%;
+    height: 600px;
+    width: 600px
 }
 
 .overlay:hover {
-    background: white;
-    opacity: 0.5;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.overlay {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.2);
+    transition: .5s;
+}
+
+.name {
+    color: #fff;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+.price {
+    color: #fff;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 2000px) {
+
+    .main_grid {
+        grid-template-columns: 600px 600px;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 1225px) {
+    .main_grid {
+        grid-template-columns: 600px;
+    }
+}
+
+
+@media only screen and (max-width: 700px) {
+    .main_grid {
+        grid-template-columns: 300px;
+    }
+
+    .bg-img1 {
+        height: 300px;
+        width: 300px
+    }
     
-}
-
-.overlay p {
-    top: 6rem;
-    left: 9rem;
-    color: white;
-    position: absolute;
-    border: solid 1px black;
-}
-
-.overlay:hover p {
-    color: black;
+    .bg-img2 {
+        height: 300px;
+        width: 300px
+    }
+    
+    .bg-img3 {
+        height: 300px;
+        width: 300px
+    }
+    
+    .bg-img4 {
+        height: 300px;
+        width: 300px
+    }
+    
+    .bg-img5 {
+        height: 300px;
+        width: 300px
+    }
+    
+    .bg-img6 {
+        height: 300px;
+        width: 300px
+    }
+    
+    .bg-img7 {
+        height: 300px;
+        width: 300px
+    }
+    
+    .bg-img8 {
+        height: 300px;
+        width: 300px
+    }
+    
+    .bg-img9 {
+        height: 300px;
+        width: 300px
+    }
+    
+    .bg-img10 {
+        height: 300px;
+        width: 300px
+    }
+    
+    .bg-img11 {
+        height: 300px;
+        width: 300px
+    }
+    
+    .bg-img12 {
+        height: 300px;
+        width: 300px
+    }
 }
