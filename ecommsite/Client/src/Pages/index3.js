@@ -1,5 +1,5 @@
 import Footer from '../components/Footer/Footer';
-import React from 'react'
+import React from '../../node_modules/react'
 
 
 

@@ -1,9 +1,9 @@
-import React from 'react';
+import React from '../../../node_modules/react';
 import './Hero.css';
 import Header from '../Header/Header'
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from 'react-responsive-carousel';
-import { Link } from 'react-router-dom';
+import '../../../node_modules/react-responsive-carousel/lib/styles/carousel.min.css'
+import { Carousel } from '../../../node_modules/react-responsive-carousel';
+import { Link } from '../../../node_modules/react-router-dom';
 
 class Hero extends React.Component {
     render(){

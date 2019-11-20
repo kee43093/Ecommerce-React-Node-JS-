@@ -1,5 +1,6 @@
 // Dependencies
 // =============================================================
+require('dotenv').config();
 const router = require("express").Router();
 const express = require('express')
 const cors = require('cors')
@@ -102,5 +103,5 @@ app.get('/api/products/type/:type', (req , res) => {
 
 
 app.listen(PORT, function () {
-  console.log(`Server listening on port ${PORT}!`)
+  console.log(`Server listening on port${PORT}!`)
 })

@@ -1,156 +1,64 @@
-import React from 'react';
-import './Footer.css'
-
-const initialState = {
-    firstName: "",
-    lastName: "",
-    email: "",
-    firstNameError: "",
-    lastNameError: "",
-    emailError: ""
-  };
-
-class NewsletterForm extends React.Component {
-    state = initialState;
-
-    handleChange = event => {
-        const isCheckbox = event.target.type === "checkbox";
-        this.setState({
-          [event.target.name]: isCheckbox
-            ? event.target.checked
-            : event.target.value
-        });
-      };
-
-    validate = () => {
-        let firstNameError = "";
-        let lastNameError = "";
-        let emailError = "";
-        let firstNameClass = document.querySelector('.firstNameError');
-        let lastNameClass = document.querySelector('.lastNameError');
-        let emailClass = document.querySelector('.emailError');
-
-        if (!this.state.firstName) {
-            firstNameError = "Field Required";
-        }
-
-        if (!this.state.lastName) {
-            lastNameError = "Field Required";
-        }
-
-        if (!this.state.email.includes('@')) {
-            emailError = 'Invalid Email Address';
-        }
-
-        if (emailError || firstNameError || lastNameError) {
-            this.setState({emailError , firstNameError , lastNameError});
-            firstNameClass.style.display = 'block';
-            lastNameClass.style.display = 'block';
-            emailClass.style.display = 'block';
-            return false;
-        }
-
-        return true;
-    }
-
-    handleSubmit = (event) => {
-        event.preventDefault();
-        let firstName = document.getElementsByName('firstName')[0].value;
-        let lastName = document.getElementsByName('lastName')[0].value;
-        let email = document.getElementsByName('email')[0].value;
-
-        let firstNameClass = document.querySelector('.firstNameError');
-        let lastNameClass = document.querySelector('.lastNameError');
-        let emailClass = document.querySelector('.emailError');
-        const isValid = this.validate();
-        if (isValid) {
-            this.newContact(firstName, lastName, email)
-                .then(res => alert(`Thanks for joining our community, ${this.state.firstName}!`))
-            this.setState(initialState);
-            firstNameClass.style.display = 'none';
-            lastNameClass.style.display = 'none';
-            emailClass.style.display = 'none';
-
-        }
-    }
-
-    newContact = async (firstName, lastName, email) => {
-        try {
-         const res = await fetch('/api/submit' , {
-                method: 'post',
-                headers: {
-                    "Content-Type": "application/json", 
-                },
-                body: JSON.stringify({
-                    firstName,
-                    lastName,
-                    email
-                })
-            })
-            const content = await res.json();
-            console.log(content)
-        }
-
-        catch(err) {
-            console.log(err)
-        }
-    }
+import React from '../../../node_modules/react';
+import './Footer.css';
+const ContactPg = () => {
    
-    render () {
-        return (
-            <>
-   
-             
-
-            <div className="form__wrapper">
-                <form className="form" onSubmit={this.handleSubmit} method="POST" action="/submit">
-                    <h1 className="form__title">Subscribe</h1>
-
-                    <label htmlFor="inputFirstName"></label>
-                    <input 
-                        name="firstName" 
-                        placeholder="First Name" 
-                        value={this.state.firstName} 
-                        onChange={this.handleChange} 
-                        id="inputFirstName" 
-                        className="form--control"
-                    />
-                    
-
-                    <label htmlFor="inputLastName"></label>
-                    <input 
-                        name="lastName" 
-                        placeholder="Last Name" 
-                        value={this.state.lastName} 
-                        onChange={this.handleChange} 
-                        id="inputLastName" 
-                        className="form--control"
-                    />
-                    
-
-                    <label htmlFor="inputEmail"></label>
-                    <input 
-                        name="email" 
-                        placeholder="Email Address" 
-                        value={this.state.email} 
-                        onChange={this.handleChange} 
-                        id="inputEmail" 
-                        className="form--control"
-                    />
-                    <div className="error emailError">{this.state.emailError}</div>
-
-                   
-
-                    <textarea id="inputMessage" className="form--control" placeholder="Leave us a message!"></textarea>
-
-                    <button className="form--button" id="submitButton" type="submit">Submit</button>
-
-                    <p className="form__copyright">© Remixer.io</p>
-                </form>
+    return (
+    <React.Fragment>
+        <div clasaName="form">
+            <section class="mb-4">
+<h2 class="h1-responsive font-weight-bold text-center my-4">Contact us</h2>
+<p class="text-center w-responsive mx-auto mb-5">If you have any questions about our soups and or the ingredients we use, feel free to send us a message!</p>
+<div class="row">
+    <div class="col-md-9 mb-md-0 mb-5 form">
+        <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="md-form mb-0">
+                    <label for="name" class="">Enter Name</label>
+                        <input type="text" id="name" name="name" class="form-control" placeholder="Full Name"/>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="md-form mb-0">
+                    <label for="email" class="">Enter Email</label>
+                        <input type="text" id="email" name="email" class="form-control" placeholder="Email"/>
+                    </div>
+                </div>
             </div>
-            </>
-        )
-    }
-}
 
-export default NewsletterForm;
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="md-form mb-0">
+                        <input type="text" id="subject" name="subject" class="form-control subject" placeholder="Subject"/>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+ 
+                <div class="col-md-12">
+
+                    <div class="md-form">
+                    <label for="message">Your message to us</label>
+                        <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea" placeholder="Message"></textarea>
+                    </div>
+
+                </div>
+            </div>     
+        </form>
+
+        <div class="text-center text-md-left filtersection">
+            <a class="btn btn-primary send" href= "" onclick="document.getElementById('contact-form').submit();">Send</a>
+        </div>
+        <div class="status"></div>
+    </div>
+
+</div>
+
+</section>
+</div>
+     </React.Fragment>
+)}
+
+export default ContactPg;

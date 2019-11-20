@@ -1,5 +1,5 @@
 // import products from '../../products.json';
-import React from 'react';
+import React from '../../../node_modules/react';
 // import Header from './components/Header/Header';
 import "./products.css";
 
